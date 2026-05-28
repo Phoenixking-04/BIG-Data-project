@@ -43,19 +43,50 @@ jupyter notebook
 For PySpark assignments, ensure Java is installed:
 ```bash
 # Install Java (required for PySpark)
-java -version  # Should be Java 8 or higher
+java -version # Should be Java 8 or higher
 
 # Then run PySpark notebooks normally via Jupyter
 ```
 
 ## Results / Outcomes
 
-- ✅ **Data Wrangling** — Successfully manipulated and cleaned multi-thousand-row medical datasets using Pandas
-- ✅ **Regression Models** — Built and evaluated linear regression models with feature engineering on real datasets
-- ✅ **KNN Classification** — Implemented K-Nearest Neighbor algorithm achieving competitive accuracy on cancer data
-- ✅ **PySpark Scalability** — Processed large datasets using Apache Spark for distributed computing
-- ✅ **Final Project** — Developed an end-to-end ML pipeline for colorectal cancer prediction using the NCI SEER registry dataset
+- ✅ Gradient Boosting achieved best accuracy at 69.9%
+  on 30,001-record NCI SEER cancer dataset
+- ✅ KNN (k=9) optimal configuration at 66.1% accuracy
+- ✅ Feature importance reveals survival months (42.5%)
+  and age (32.9%) as top predictors
+- ✅ SHAP analysis confirms interpretable model decisions
+  for healthcare disparity research
+- ✅ PySpark pipeline successfully processes
+  large-scale distributed datasets
 
----
+## 🏆 Actual Model Results (NCI SEER Dataset — 30,001 Records)
+| Model | Accuracy | Notes |
+|-------|----------|-------|
+| **Gradient Boosting** | **69.9%** | Best performer |
+| Logistic Regression | 69.7% | Strong baseline |
+| Decision Tree (depth=5) | 69.6% | Interpretable |
+| KNN (k=9) | 66.1% | Best k value |
+| KNN (k=7) | 65.8% | |
+| Random Forest | 65.0% | Ensemble method |
+| KNN (k=3) | 62.8% | Lower k overfits |
 
-> 🔗 **Developer:** [Kalyankumar Sandireddy](https://kalyankumar-sandireddy.online) | [LinkedIn](https://www.linkedin.com/in/kalyankumar-sandireddy-400681176)
+## 🔍 Feature Importance (Random Forest)
+| Feature | Importance |
+|---------|-----------|
+| Survival Months | 42.5% |
+| Age | 32.9% |
+| Year of Diagnosis | 15.9% |
+| Marital Status | 4.4% |
+| Race | 2.4% |
+
+## Key Findings
+- Gradient Boosting outperforms all models at 69.9%
+- Survival months and age are the strongest predictors
+  (75.4% combined importance)
+- Healthcare disparity analysis shows demographic
+  patterns in survival rates
+- SHAP analysis provides interpretable feature
+  contributions for medical decision support
+
+🔗 Developer: Kalyankumar Sandireddy | [LinkedIn](https://www.linkedin.com/in/kalyankumar-sandireddy-400681176)
